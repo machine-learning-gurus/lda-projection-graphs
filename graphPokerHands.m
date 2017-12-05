@@ -28,16 +28,17 @@ figure;
 hold on;
 
 c0_size = size(c0);
+markerSize = 20;
 
-p1 = scatter(c0(:,1), c0(:,2), 10, 'r', 'filled');
-p2 = scatter(c1(:,1), c1(:,2), 10, 'b', 'filled');
-p3 = scatter(c3(:,1), c3(:,2), 10, 'g', 'filled');
-p4 = scatter(c4(:,1), c4(:,2), 10, 'm', 'filled');
-p5 = scatter(c5(:,1), c5(:,2), 10, 'c', 'filled');
-p6 = scatter(c6(:,1), c6(:,2), 10, 'k', 'filled');
-p7 = scatter(c7(:,1), c7(:,2), 10, [.2 .2 .2], 'filled');
-p8 = scatter(c8(:,1), c8(:,2), 10, [1 .5 .2], 'filled');
-p9 = scatter(c9(:,1), c9(:,2), 10, [.2 .5 1], 'filled');
+p1 = scatter(c0(:,1), c0(:,2), markerSize, 'r', 'filled');
+p2 = scatter(c1(:,1), c1(:,2), markerSize, 'b', 'filled');
+p3 = scatter(c3(:,1), c3(:,2), markerSize, 'g', 'filled');
+p4 = scatter(c4(:,1), c4(:,2), markerSize, 'm', 'filled');
+p5 = scatter(c5(:,1), c5(:,2), markerSize, 'c', 'filled');
+p6 = scatter(c6(:,1), c6(:,2), markerSize, 'k', 'filled');
+p7 = scatter(c7(:,1), c7(:,2), markerSize, [.2 .2 .2], 'filled');
+p8 = scatter(c8(:,1), c8(:,2), markerSize, [1 .5 .2], 'filled');
+p9 = scatter(c9(:,1), c9(:,2), markerSize, [.2 .5 1], 'filled');
 alpha(p1, .25);
 alpha(p2, .25);
 alpha(p3, .25);
@@ -48,6 +49,6 @@ alpha(p7, .25);
 alpha(p8, .25);
 alpha(p9, .25);
 hold off;
-title("LDA (original data)")
+title("LDA (Poker Hand Dataset)");
 
 end

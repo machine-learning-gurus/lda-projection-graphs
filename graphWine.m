@@ -15,12 +15,17 @@ Xproj = project(Xm, Wlda(:,1:2));
 wine1 = Xproj(find(y == 1), :);
 wine2 = Xproj(find(y == 2), :);
 wine3 = Xproj(find(y == 3), :);
+markerSize = 20;
 
 figure;
 hold on;
-plot(wine1(:,1), wine1(:,2), "ro", "markersize", 3, "linewidth", 3);
-plot(wine2(:,1), wine2(:,2), "go", "markersize", 3, "linewidth", 3);
-plot(wine3(:,1), wine3(:,2), "bo", "markersize", 3, "linewidth", 3);
-title("LDA (original data)")
+p1 = scatter(wine1(:,1), wine1(:,2), markerSize, 'r', 'filled');
+p2 = scatter(wine2(:,1), wine2(:,2), markerSize, 'b', 'filled');
+p3 = scatter(wine3(:,1), wine3(:,2), markerSize, 'g', 'filled');
+alpha(p1, .5);
+alpha(p2, .5);
+alpha(p3, .5);
+hold off;
+title("LDA (Wine Dataset)");
 
 end
