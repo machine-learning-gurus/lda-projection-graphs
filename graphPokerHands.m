@@ -78,6 +78,8 @@ alpha(p8_avg, .3);
 alpha(p9, .15);
 alpha(p9_avg, .3);
 hold off;
-title("LDA (Poker Hand Dataset)");
+
+set(gca, 'Color', [50 56 62] ./ 255);
+title("LDA Projection (Poker Hand Dataset)");
 
 end
